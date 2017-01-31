@@ -34,3 +34,74 @@
 	div.gform_wrapper form li {
 		@include rem(margin, 16px 0 0);
 	}
+/* header image*/
+.header-image .title-area
+{
+    display: initial !important;
+    min-height: auto !important;
+    width: inherit !important;
+}
+.header-image .site-title{
+	//margin-left:50%;
+	width: 100% !important;
+	min-height:initial !important;
+}
+.nav-primary{
+	float:right;
+	font-size:11px;
+	text-transform:uppercase;
+	font-weight:bold;
+	background-color:transparent !important;
+}
+header.site-header{
+	background-image:none !important;
+}
+.site-header {
+	padding-bottom:0px !important;
+	min-height: initial;
+	.genesis-nav-menu a {
+	    color: $dark;
+	    padding-top: 49px;
+
+	}
+}
+
+header.site-header{
+	position: fixed;
+	width:100%;
+	background-color:rgba(38,38,38,0.2) !important;
+	// set animation
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+	z-index:100;
+}
+
+.site-header.theme-change {
+	background-color:rgba(38,38,38,1) !important;	
+	.genesis-nav-menu a {
+	    color: $light;
+	    padding-top: 49px;
+	}
+	.site-title
+	{
+	    display: initial !important;
+	    min-height: 49px !important;
+	    overflow: hidden !important;
+	    width: 100% !important;
+	    margin:initial !important;
+	}
+	.site-title a{
+	
+	width: 100% !important;
+	margin-left: 0px !important;
+	margin-top:0px !important;
+}
+}
+	.site-header .site-title a{
+	width: 100% !important;
+}
+//solil slider
+
+img#soliloquy-image-32{
+		width:100% !important;
+	}

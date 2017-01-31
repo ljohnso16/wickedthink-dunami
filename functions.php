@@ -39,12 +39,12 @@ function gs_theme_setup() {
 	
 	//Custom Image Sizes
 	add_image_size( 'featured-image', 225, 160, TRUE );
-	
-	// Enable Custom Background
-	//add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	//add_theme_support('genesis-custom-header');
+	add_theme_support('genesis-custom-header',array(
+		'width' => 400,
+		'height' => 81
+	));
 
 
 	// Add support for structural wraps
@@ -56,6 +56,12 @@ function gs_theme_setup() {
 		'footer-widgets',
 		'footer'
 	) );
+
+	//* Reposition the primary navigation menu
+	remove_action( 'genesis_after_header', 'genesis_do_nav' );
+	add_action( 'genesis_header', 'genesis_do_nav', 12 );
+	add_filter( 'genesis_seo_title', 'child_header_title', 10, 3 );
+
 
 	/**
 	 * 07 Footer Widgets
@@ -73,7 +79,7 @@ function gs_theme_setup() {
 		'genesis-menus', 
 		array(
 			'primary'   => __( 'Primary Navigation Menu', CHILD_DOMAIN ), 
-			'secondary' => __( 'Secondary Navigation Menu', CHILD_DOMAIN ),
+			'about'     => __( 'Navigation Menu Shows in About Page', CHILD_DOMAIN ),
 			'footer'    => __( 'Footer Navigation Menu', CHILD_DOMAIN ),
 			'mobile'    => __( 'Mobile Navigation Menu', CHILD_DOMAIN ),
 		)
@@ -95,8 +101,48 @@ function gs_theme_setup() {
 	
 	// Register Sidebars
 	gs_register_sidebars();
+		//Disable all emoji's
+	function disable_wp_emojicons() {
+
+	  // all actions related to emojis
+	  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	}
+	add_action( 'init', 'disable_wp_emojicons' );
+
+	remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_excerpt', 'wpautop' );
 	
+	// add_filter( 'genesis_attr_site-header', 'themeprefix_primary_nav_id' );
+	// function themeprefix_primary_nav_id( $attributes ) {
+	 
+	//  $attributes['class'] .= ' navbar navbar-default navbar-fixed-top';
+	//  return $attributes;
+	// }	
+
 } // End of Set Up Function
+//* Modify the header URL - HTML5 Version
+function child_header_title( $title, $inside, $wrap ) {
+    $inside = sprintf( '<a href="'.home_url('/').'" title="%s"><img alt="'.get_bloginfo( 'name' ).'" src="' . get_stylesheet_directory_uri() . '/images/logo.png" /></a>', esc_attr( get_bloginfo( 'name' ) ), get_bloginfo( 'name' ) );
+    return sprintf( '<%1$s class="site-title">%2$s</%1$s>', $wrap, $inside );
+}
+
+add_action( 'genesis_after_header', 'dunami_header_sliders' );
+function dunami_header_sliders() {
+    $post_id = get_the_ID();
+	$ourshortcode = types_render_field('solil-shortcode', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
+	if(!empty($ourshortcode)){
+		echo do_shortcode('[soliloquy slug="'.$ourshortcode.'"]');
+	}
+	else
+		return;
+
+} 
 
 // Register Sidebars
 function gs_register_sidebars() {

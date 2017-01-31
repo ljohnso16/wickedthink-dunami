@@ -1,4 +1,15 @@
+
+
 jQuery(document).ready(function ($) {
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1){  
+        $('header.site-header').addClass("theme-change");
+      }
+      else{
+        $('header.site-header').removeClass("theme-change");
+      }
+});
     $("ul.menu-mobile").before('<div id="primary-menu-toggle" class="menu-toggle primary"><a class="toggle-switch show" href="#"><span>Show Menu</span></a></div>');
     $("#primary-menu-toggle .show").click(function () {
         if ($(".menu-mobile").is(":hidden")) {

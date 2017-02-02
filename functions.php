@@ -100,7 +100,7 @@ function gs_theme_setup() {
 	
 	
 	// Register Sidebars
-	gs_register_sidebars();
+	//gs_register_sidebars();
 		//Disable all emoji's
 	function disable_wp_emojicons() {
 
@@ -118,20 +118,20 @@ function gs_theme_setup() {
 	remove_filter( 'the_content', 'wpautop' );
 	remove_filter( 'the_excerpt', 'wpautop' );
 	
-	// add_filter( 'genesis_attr_site-header', 'themeprefix_primary_nav_id' );
-	// function themeprefix_primary_nav_id( $attributes ) {
-	 
-	//  $attributes['class'] .= ' navbar navbar-default navbar-fixed-top';
-	//  return $attributes;
-	// }	
+	//Removes individual page title
+	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
+	
+	add_action('genesis_footer', 'smb_footer', 5);
+	add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');	
+	
 } // End of Set Up Function
 //* Modify the header URL - HTML5 Version
 function child_header_title( $title, $inside, $wrap ) {
     $inside = sprintf( '<a href="'.home_url('/').'" title="%s"><img alt="'.get_bloginfo( 'name' ).'" src="' . get_stylesheet_directory_uri() . '/images/logo.png" /></a>', esc_attr( get_bloginfo( 'name' ) ), get_bloginfo( 'name' ) );
     return sprintf( '<%1$s class="site-title">%2$s</%1$s>', $wrap, $inside );
 }
-
+//adds sliders based on the slug given on each page
 add_action( 'genesis_after_header', 'dunami_header_sliders' );
 function dunami_header_sliders() {
     $post_id = get_the_ID();
@@ -142,50 +142,121 @@ function dunami_header_sliders() {
 	else
 		return;
 
-} 
+}
+function dunami_social_icons(){
+	echo '<a href="#" class="footer-logo"><img alt="" src="' . get_stylesheet_directory_uri() . '/images/facebook.png" /></a>
+<a href="#" class="footer-logo"><img alt="" src="' . get_stylesheet_directory_uri() . '/images/twitter.png" /></a>
+<a href="#" class="footer-logo"><img alt="" src="' . get_stylesheet_directory_uri() . '/images/linkedin.png" /></a>
+<a href="#" class="footer-logo"><img alt="" src="' . get_stylesheet_directory_uri() . '/images/gplus.png" /></a>
+<a href="#" class="footer-logo"><img alt="" src="' . get_stylesheet_directory_uri() . '/images/ytube.png" /></a>';
+}
+function smb_footer() {
+	$footer_menu_args = array('echo' => false,);
+	echo wp_nav_menu( array(
+	                 'theme_location'  => 'footer',
+	                 'container_class' => 'col-md-6',
+	                 'items_wrap'      => '<ul id="menu-footer" class="menu"><h4>More from Dunami</h4>%3$s</ul>'
+	)).'<div class="col-md-6">'.dunami_social_icons().'</div><div class="clearfix"></div>';
+}
 
-// Register Sidebars
-function gs_register_sidebars() {
-	$sidebars = array(
-		array(
-			'id'			=> 'home-top',
-			'name'			=> __( 'Home Top', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'home-middle-01',
-			'name'			=> __( 'Home Left Middle', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'home-middle-02',
-			'name'			=> __( 'Home Middle Middle', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage middle section.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'home-middle-03',
-			'name'			=> __( 'Home Right Middle', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'home-bottom',
-			'name'			=> __( 'Home Bottom', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'portfolio',
-			'name'			=> __( 'Portfolio', CHILD_DOMAIN ),
-			'description'	=> __( 'Use featured posts to showcase your portfolio.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'after-post',
-			'name'			=> __( 'After Post', CHILD_DOMAIN ),
-			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
-		),
-	);
-	
-	foreach ( $sidebars as $sidebar )
-		genesis_register_sidebar( $sidebar );
+
+
+function sp_footer_creds_filter( $creds ) {
+	$location = '<span class="footer-links"><a href="#">Privacy Policy</a> <a href="#">Legal</a> <a href="#">Site Feedback</a> </span>';
+	$creds = $location . '<span class="footer-copyright">Dunami [footer_copyright] </span>';
+	return $creds;
+}
+
+add_action('genesis_before_footer', 'gs_do_before_footer');
+function gs_do_before_footer() {
+	$post_id = get_the_ID();
+	$staticsection1 = types_render_field('extra-section-1', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
+	if(!empty($staticsection1)){
+		echo '<div id="static-section-1-area"><div class="area-wrap">'.$staticsection1.'</div></div>';
+	}
+	$staticsection2 = types_render_field('extra-section-2', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
+	if(!empty($staticsection1)){
+		echo '<div id="static-section-2-area"><div class="area-wrap">'.$staticsection2.'</div></div>';
+	}		
+	$staticsection3 = types_render_field('extra-section-3', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
+	if(!empty($staticsection1)){
+		echo '<div id="static-section-3-area"><div class="area-wrap">'.$staticsection3.'</div></div>';
+	}
+	$staticsection4 = types_render_field('extra-section-4', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
+	if(!empty($staticsection1)){
+		echo '<div id="static-section-4-area"><div class="area-wrap">'.$staticsection4.'</div></div>';
+	}
+	echo '<div id="lets-talk-footer"><div class="wrap"><h3>Let\'s Talk</h3><p>Stop focusing on <span>WHAT</span>, start knowing <span>WHO</span> matters.<br />Scedule your non-obligation demo today and see how the Dunami platform<br />can powerfully impact your organization</p><a class="dunami-effect btn btn-default" href="#" title="">Schedule Demo</a></div></div>';			
+}
+add_shortcode('focus-who-matters','generate_focus_how_matters');
+function generate_focus_how_matters(){
+return '
+<div id="who-matters" class="dunami-carousel-custom carousel slide" data-ride="carousel">
+    <div class="carousel-outer">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="id-key-influences item active">
+                <div class="col-md-3"></div>
+                <div class="text col-md-4">
+					<h2>Identify Key Influencers</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
+            </div>
+
+
+            <div class="item ignore-irrelevant">
+                <div class="col-md-3"></div>
+                <div class="text col-md-4">
+					<h2>Ignore The Irrelevant</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
+            </div>
+            <div class="item see-connections">
+                <div class="col-md-3"></div>
+                <div class="text col-md-4">
+					<h2>See The Connections</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
+            </div>
+            <div class="item discover-networks">
+                <div class="col-md-3"></div>
+                <div class="text col-md-4">
+					<h2>Discover Critical Networks</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
+            </div>            
+        </div>
+        <!-- Controls -->
+        <div class="controls">
+	        <a class="" href="#who-matters" data-slide="prev">
+	            <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+	        </a>
+	        <a class="" href="#who-matters" data-slide="next">
+	            <span class="pull-right glyphicon glyphicon-chevron-right"></span>
+	        </a>
+	        <div class=clearfix"></div>
+		</div>        
+    </div>    
+    <!-- Indicators -->
+
+    
+	<div class="indicator-row">
+		<div class="title">Focus On <br />Who Matters</div>	        
+	    <ol class="carousel-indicators">	   	    
+		        <li data-target="#who-matters" data-slide-to="0" class="indicator active">Identify <br />Key Influencers</li>
+		        <li data-target="#who-matters" data-slide-to="1" class="indicator">Ignore<br />The Irrelevant</li>
+		        <li data-target="#who-matters" data-slide-to="2" class="indicator">See The<br /> Connections</li>
+		        <li data-target="#who-matters" data-slide-to="3" class="indicator">Discover<br /> Critical Networks</li>
+	    </ol>
+	    <div class="space">&nbsp;</div>
+    </div>
+</div>
+';
 }
 
 /**
@@ -211,15 +282,15 @@ function gs_mobile_navigation() {
 }
 
 // Add Widget Area After Post
-add_action('genesis_after_entry', 'gs_do_after_entry');
-function gs_do_after_entry() {
- 	if ( is_single() ) {
- 	genesis_widget_area( 
-                'after-post', 
-                array(
-                        'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">', 
-                        'after' => '</div></aside><!-- end #home-left -->',
-                ) 
-        );
- }
- }
+// add_action('genesis_after_entry', 'gs_do_after_entry');
+// function gs_do_after_entry() {
+//  	if ( is_single() ) {
+//  	genesis_widget_area( 
+//                 'after-post', 
+//                 array(
+//                         'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">', 
+//                         'after' => '</div></aside><!-- end #home-left -->',
+//                 ) 
+//         );
+//  }
+ //}

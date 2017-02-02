@@ -34,7 +34,7 @@
 	div.gform_wrapper form li {
 		@include rem(margin, 16px 0 0);
 	}
-/* header image*/
+/* header image and navbar incl animation*/
 .header-image .title-area
 {
     display: initial !important;
@@ -65,19 +65,31 @@ header.site-header{
 
 	}
 }
-
+header.site-header .wrap {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    // set animation
+	-webkit-transition: all 0.9s ease;
+	transition: all 0.9s ease;
+}
 header.site-header{
 	position: fixed;
 	width:100%;
 	background-color:rgba(38,38,38,0.2) !important;
 	// set animation
-	-webkit-transition: all 0.7s ease;
-	transition: all 0.7s ease;
+	-webkit-transition: all 0.9s ease;
+	transition: all 0.9s ease;
 	z-index:100;
 }
 
+.header-image .site-title a{
+	min-height:initial !important;
+}
 .site-header.theme-change {
-	background-color:rgba(38,38,38,1) !important;	
+	background-color:rgba(38,38,38,1) !important;
+	.wrap {
+	    padding: 0px 0px;
+	}
 	.genesis-nav-menu a {
 	    color: $light;
 	    padding-top: 49px;
@@ -90,18 +102,253 @@ header.site-header{
 	    width: 100% !important;
 	    margin:initial !important;
 	}
-	.site-title a{
-	
-	width: 100% !important;
-	margin-left: 0px !important;
-	margin-top:0px !important;
+	.site-title a{	
+		width: 100% !important;
+		margin-left: 0px !important;
+		margin-top:0px !important;
+	}
 }
-}
-	.site-header .site-title a{
+.site-header .site-title a{
 	width: 100% !important;
 }
 //solil slider
 
-img#soliloquy-image-32{
+#soliloquy-27{
+	.soliloquy-caption-inside {
+	    padding-top: 23% !important;
+	    background: transparent !important;
+	    font-size: 2em !important;
+		p.soliloquy-fc-caption-title {
+		    font-size: 2em;
+	    	text-transform: uppercase;
+	    	font-style: italic;
+    		font-weight: bold;
+    		padding-bottom:45px;
+		}
+		p.soliloquy-fc-caption-body{
+			padding-bottom:45px;
+		}
+	}
+	img#soliloquy-image-32{
 		width:100% !important;
 	}
+
+}
+
+/*Dunami Effect BTN*/
+a.dunami-effect.btn.btn-default {
+    padding: 15px 20px;
+    background-color: rgba(255,255,255,0.9);
+    border: 1px solid $color-extra;
+    font-size: 16px;
+    color:$dark;    
+	-moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+    line-height: 1;
+    border-radius:0px !important;
+   
+}
+a.dunami-effect.btn.btn-default:hover {
+    background-color: rgba(209,49,56,0.8);
+    border: 1px solid $light;
+    color: $light;
+}
+//home page specific tags
+.home 
+{
+	.entry-content p {
+	    margin-left: 12%;
+	}
+}
+//modified carosel sass
+.dunami-carousel-custom {
+	position: relative;
+    text-align: center;
+    background: #fff;
+    z-index: 2;
+    margin-bottom: -1px;
+    margin: 20px auto;
+    width: 100%;
+	.indicator-row    {
+		position: relative;
+		width: 100%;
+		margin-bottom: 1.5em;
+		text-align: center;
+		background: #f5f7fa;
+		border-bottom: 2px solid #eef1f5;
+		display: table;
+		.carousel-indicators{
+			width: 100%;
+			display: table;
+			.indicator{
+				color: $dark;
+				position: relative;
+			    display: table-cell;
+			    vertical-align: middle;
+		    	cursor:pointer;
+		    	border-right: 1px solid $textColor;
+				border-collapse: separate;
+				border-spacing: 10px;
+				line-height: 1;
+				padding:35px 10px;
+			    font-weight: normal;					
+			    // set animation
+				-webkit-transition: all 0.5s ease;
+				transition: all 0.5s ease;				
+
+		    }
+			.active{
+				text-shadow:0px 0px 1px black;
+			    // set animation
+				-webkit-transition: all 0.5s ease;
+				transition: all 0.5s ease;				
+			}
+			.active::before{
+				content: '';
+			    width: 0px; 
+			    height: 0px;
+			    border-left: 65px solid transparent;
+			    border-right: 65px solid transparent;
+			    border-bottom: 50px solid #f5f7fa;
+			    position: absolute;
+			    bottom: 85px;
+			    left:85px			    
+
+			}
+
+		    .indicator:last-child{
+				margin-right: none;
+
+		    }
+		}
+	    div.title{
+	    	color: $color-extra;
+	    	font-weight: bold;
+			position: relative;
+		    display: table-cell;
+		    vertical-align: middle;
+		    font-size: 20px !important;
+		    line-height: 1;
+			border-right: 1px solid $textColor;
+	    }
+		div.space{
+			min-width:80px;
+			border:none !important;
+			position: relative;
+		    display: table-cell;			
+		}
+	    div.item:last-child {
+		    margin-right: 0;
+		}
+	}
+	.carousel-inner div.item {
+	    margin: auto;
+	    .text{
+	    	p{text-align:left;}
+	    }
+	    .zoom-picture.col-md-5 {
+    		height: 447px;
+
+			img{
+				height: 1px;
+			    // set animation
+				-webkit-transition: all 0.25s ease;
+				transition: all 0.25s ease;				
+			}
+		} 
+	}
+	.carousel-inner div.item.active {
+	    .zoom-picture.col-md-5 img {
+    		height: 447px;
+		}
+
+	}
+	.carousel-inner div.item.active.prev {
+	    .zoom-picture.col-md-5 img {
+    		height: 1px !important;
+		}
+		 
+	}		
+	.carousel-outer {
+		.controls {
+		    position: absolute;
+		    bottom: 80%;
+		    left: 24%;
+		    width: 635px;
+		    span.glyphicon{
+				text-shadow:0 1px 2px rgba(0,0,0,.6);
+				color: $light;
+				font-size:2em;
+		    }
+
+		}
+	}
+}
+
+//extra footer
+div#lets-talk-footer{
+	background-image:url('./images/lets-talk-lrg.png');
+	min-height:310px;
+	background-attachment: fixed;
+	.wrap{
+		text-align: center;
+		margin: auto;
+		h3{
+			padding-top: 50px;
+			color: $color-extra;
+			text-decoration: italic;			
+		}
+		p{
+			padding-bottom:25px;
+			font-weight: 400;
+			span{
+				font-weight: 800;
+			}
+		}
+	}
+}
+//Footer
+footer.site-footer {
+	.wrap{
+		padding-bottom:25px !important;
+		padding-top: 0px;
+		border:none !important;
+		ul#menu-footer {
+			h4{
+				color:$color-extra;
+				text-transform: uppercase;
+				font-weight: bold;
+				line-height:1;
+
+			}
+		    max-width: 210px;
+		    margin: auto;
+			li {
+				  display: block;
+				  a{
+				  	color:$textColor;
+				  }
+				  a:visited{
+				  	color:$textColor;
+				  }				  
+			}
+		}		
+		p {
+			span{
+				display: block;
+				a{
+					padding-right:20px;
+					color: $textColor;
+				}
+				a:hover{
+					text-decoration: none;
+
+				}
+			
+			}
+		}
+	}
+}

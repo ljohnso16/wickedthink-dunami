@@ -7,7 +7,7 @@ $color-base: 			#262626 !default;//header bg color
 $color-primary: 		#5B8D96 !default;
 $color-secondary: 		#C45A3F !default;
 $color-cta: 			#3E6B85 !default;
-$color-extra: 			#3B3D42 !default;
+$color-extra: 			#D13138 !default;//dunami red
 
 // Light and Dark
 // -------------------------
@@ -16,7 +16,7 @@ $light:                 #fff !default;
 
 // Typography
 // -------------------------
-$textColor:             #333 !default;
+$textColor:             #808080 !default;
 $googleFont:            Arimo, Varela, sans-serif !default; // Can use multiple fonts with a comma. Cabin, Open Sans, etc...
 $googleFontWeight:      400 !default; // 400 or 700
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;

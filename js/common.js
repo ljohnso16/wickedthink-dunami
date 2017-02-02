@@ -1,5 +1,4 @@
-
-
+try{Typekit.load({ async: true });}catch(e){}
 jQuery(document).ready(function ($) {
 
 $(window).scroll(function() {

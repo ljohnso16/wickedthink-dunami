@@ -44,7 +44,9 @@ function gs_register_scripts() {
 	 */
 	//wp_register_script( 'gs-twitter-bootstrap', CHILD_JS . '/' . gs_script_suffix( 'bootstrap', 'js' ), array( 'jquery' ), '3.0.3' );
 	wp_register_script( 'gs-twitter-bootstrap-cdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array( 'jquery' ), '3.3.7' );
-	
+	wp_register_script( 'gs-typekit', 'https://use.typekit.net/hkt7aak.js');
+
+
 	/**
 	 * Font Awesome
 	 * @link http://www.bootstrapcdn.com/?v=10292012225705
@@ -53,6 +55,7 @@ function gs_register_scripts() {
 	//wp_register_style( 'gs-font-awesome', CHILD_CSS . '/' . gs_script_suffix( 'font-awesome', 'css' ), array(), '4.0.3' );
 	wp_register_style( 'gs-font-awesome-cdn', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', array(), '1.0.0' );
 	
+
 
 	/**
 	 * Animate.css
@@ -103,6 +106,7 @@ function gs_enqueue_scripts() {
 	//wp_enqueue_script( 'gs-animate' );
 	wp_enqueue_script( 'gs-twitter-bootstrap-cdn' );	
 	wp_enqueue_script( 'gs-common' );
+	wp_enqueue_script( 'gs-typekit' );
 	
 	// Localize Script
 	/*

@@ -175,17 +175,21 @@ function gs_do_before_footer() {
 		echo '<div id="static-section-1-area"><div class="area-wrap">'.$staticsection1.'</div></div>';
 	}
 	$staticsection2 = types_render_field('extra-section-2', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
-	if(!empty($staticsection1)){
-		echo '<div id="static-section-2-area"><div class="area-wrap">'.$staticsection2.'</div></div>';
+	if(!empty($staticsection2)){
+		echo '<div id="static-section-2-area"><div class="wrap">'.$staticsection2.'</div></div>';
 	}		
 	$staticsection3 = types_render_field('extra-section-3', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
-	if(!empty($staticsection1)){
+	if(!empty($staticsection3)){
 		echo '<div id="static-section-3-area"><div class="area-wrap">'.$staticsection3.'</div></div>';
 	}
 	$staticsection4 = types_render_field('extra-section-4', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));	
-	if(!empty($staticsection1)){
-		echo '<div id="static-section-4-area"><div class="area-wrap">'.$staticsection4.'</div></div>';
+	if(!empty($staticsection4)){
+		echo '<div id="static-section-4-area"><div class="wrap">'.$staticsection4.'</div></div>';
 	}
+	$staticsection5 = types_render_field('extra-section-5', array('id' => $post_id, 'show_name' => false, 'output' => 'raw'));		
+	if(!empty($staticsection5)){
+		echo '<div id="static-section-5-area"><div class="area-wrap">'.$staticsection5.'</div></div>';
+	}	
 	echo '<div id="lets-talk-footer"><div class="wrap"><h3>Let\'s Talk</h3><p>Stop focusing on <span>WHAT</span>, start knowing <span>WHO</span> matters.<br />Scedule your non-obligation demo today and see how the Dunami platform<br />can powerfully impact your organization</p><a class="dunami-effect btn btn-default" href="#" title="">Schedule Demo</a></div></div>';			
 }
 add_shortcode('focus-who-matters','generate_focus_how_matters');

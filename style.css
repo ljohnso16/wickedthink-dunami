@@ -8222,7 +8222,7 @@ body {
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.8;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", sans-serif;
   color: #808080;
 }
 
@@ -8477,7 +8477,7 @@ h6,
   line-height: 1.2;
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
-  font-family: Arimo, Varela, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", sans-serif;
   font-weight: 700;
 }
 
@@ -8569,7 +8569,7 @@ h6,
   margin: 4rem 0 0.8rem;
   font-size: 48px;
   font-size: 4.8rem;
-  font-family: Arimo, Varela, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", sans-serif;
   font-weight: 700;
 }
 .site-title a {
@@ -8621,7 +8621,7 @@ h6,
 .genesis-nav-menu {
   clear: both;
   color: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "ff-tisa-sans-web-pro", sans-serif;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   line-height: 1.5;

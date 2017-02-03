@@ -35,16 +35,17 @@
 		@include rem(margin, 16px 0 0);
 	}
 /* header image and navbar incl animation*/
-.header-image .title-area
+.site-header .title-area
 {
     display: initial !important;
     min-height: auto !important;
     width: inherit !important;
 }
-.header-image .site-title{
+.site-header .site-title{
 	//margin-left:50%;
 	width: 100% !important;
 	min-height:initial !important;
+	margin:0px !important;
 }
 .nav-primary{
 	float:right;
@@ -113,7 +114,7 @@ header.site-header{
 }
 //solil slider
 
-#soliloquy-27{
+#soliloquy-27,#soliloquy-39{
 	.soliloquy-caption-inside {
 	    padding-top: 23% !important;
 	    background: transparent !important;
@@ -129,7 +130,7 @@ header.site-header{
 			padding-bottom:45px;
 		}
 	}
-	img#soliloquy-image-32{
+	img#soliloquy-image-32,img#soliloquy-image-41{
 		width:100% !important;
 	}
 
@@ -142,20 +143,34 @@ a.dunami-effect.btn.btn-default {
     border: 1px solid $color-extra;
     font-size: 16px;
     color:$dark;    
-	-moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.62s ease-in-out;
     text-transform: uppercase;
     line-height: 1;
     border-radius:0px !important;
    
 }
 a.dunami-effect.btn.btn-default:hover {
-    background-color: rgba(209,49,56,0.8);
+    background-color: transparent;
     border: 1px solid $light;
     color: $light;
+    box-shadow: inset 0 0 0 50px rgba(209, 49, 56, 0.9);
 }
+
+a.dunami-effect.btn.btn-default.reverse {
+    background-color: rgba(209, 49, 56, 0.9);
+    border: 1px solid $color-extra;
+    color:$light;    
+}
+a.dunami-effect.btn.btn-default.reverse:hover {
+    background-color: transparent;
+    border: 1px solid $color-extra;
+    color: $color-extra;
+    box-shadow: inset 0 0 0 50px rgba(255,255,255,0.9);
+}
+
 //home page specific tags
 .home 
 {
@@ -200,6 +215,9 @@ a.dunami-effect.btn.btn-default:hover {
 				transition: all 0.5s ease;				
 
 		    }
+		    .indicator:hover{
+		    	background-color: #cecece;
+		    }
 			.active{
 				text-shadow:0px 0px 1px black;
 			    // set animation
@@ -215,13 +233,23 @@ a.dunami-effect.btn.btn-default:hover {
 			    border-bottom: 50px solid #f5f7fa;
 			    position: absolute;
 			    bottom: 85px;
-			    left:85px			    
+			    left:85px;			    
 
 			}
+			.active:hover::before{
+				content: '';
+			    width: 0px; 
+			    height: 0px;
+			    border-left: 65px solid transparent;
+			    border-right: 65px solid transparent;
+			    border-bottom: 50px solid #cecece;
+			    position: absolute;
+			    bottom: 85px;
+			    left:85px;				
 
+			}
 		    .indicator:last-child{
 				margin-right: none;
-
 		    }
 		}
 	    div.title{
@@ -247,11 +275,26 @@ a.dunami-effect.btn.btn-default:hover {
 	.carousel-inner div.item {
 	    margin: auto;
 	    .text{
-	    	p{text-align:left;}
+	    	color: $light;
+	    	max-width: 425px;
+	    	text-align:left;
+	    	h2{
+			    color: $light;
+			    padding-top: 33%;
+			    font-weight: normal;
+			    font-size: 33px;
+			    line-height: 1;
+			    margin-bottom: 5px;
+	    	}
+	    	p{
+	    		
+
+	    	}
 	    }
 	    .zoom-picture.col-md-5 {
     		height: 447px;
-
+    		float: right;
+    		padding: 0px !important;
 			img{
 				height: 1px;
 			    // set animation
@@ -263,6 +306,7 @@ a.dunami-effect.btn.btn-default:hover {
 	.carousel-inner div.item.active {
 	    .zoom-picture.col-md-5 img {
     		height: 447px;
+    		float: right;    		
 		}
 
 	}
@@ -275,9 +319,9 @@ a.dunami-effect.btn.btn-default:hover {
 	.carousel-outer {
 		.controls {
 		    position: absolute;
-		    bottom: 80%;
-		    left: 24%;
-		    width: 635px;
+		    bottom: 60%;
+		    left: 21%;
+		    width: 27%;
 		    span.glyphicon{
 				text-shadow:0 1px 2px rgba(0,0,0,.6);
 				color: $light;
@@ -287,26 +331,58 @@ a.dunami-effect.btn.btn-default:hover {
 		}
 	}
 }
+//home page fowm
+.id-key-influences.item{
+	background-image:url('./images/influencers.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+.ignore-irrelevant.item{
+	background-image:url('./images/irrelevant.jpg');
+	background-size: cover;	
+	background-attachment: fixed;
+}
+.see-connections.item{
+	background-image:url('./images/connections.jpg');
+	background-size: cover;		
+	background-attachment: fixed;
+}
+.discover-networks.item {
+	background-image:url('./images/networks.jpg');
+	background-size: cover;		
+	background-attachment: fixed;
+}
+
 
 //extra footer
 div#lets-talk-footer{
-	background-image:url('./images/lets-talk-lrg.png');
-	min-height:310px;
-	background-attachment: fixed;
+	background-image:url('./images/lets-talk-bg.jpg');
+    min-height: 310px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;		
 	.wrap{
 		text-align: center;
 		margin: auto;
-		h3{
+		h2{
 			padding-top: 50px;
 			color: $color-extra;
-			text-decoration: italic;			
+			font-style: italic;	
+			font-family: $sansFontFamily;		
 		}
 		p{
 			padding-bottom:25px;
 			font-weight: 400;
+			color: $dark;
 			span{
 				font-weight: 800;
+				text-transform: uppercase;
+				font-style: italic;
 			}
+		}
+		a.dunami-effect.btn.btn-default{
+			background: rgba(255,255,255,0.3);
 		}
 	}
 }
@@ -351,4 +427,188 @@ footer.site-footer {
 			}
 		}
 	}
+}
+#success-stories{
+	.carousel-outer{
+		background-image:url('./images/testimonials-bg.jpg');
+	    background-size: cover;
+	    background-attachment: fixed;		
+	}
+	li.indicator.active img{
+		opacity: 1;		
+	}
+	.indicator{
+		border: none !important;
+		img {
+			// set animation
+			-webkit-transition: all 0.25s ease;
+			transition: all 0.25s ease;	
+			opacity:0.2;
+		}
+		.active,img:hover{
+			opacity: 1;
+		}
+	    padding-top: 10px !important;
+	    padding-bottom: 0px !Important;
+	}
+	.item{
+		min-height:460px;
+		// background-color:$color-extra;
+		color: $light;
+		p.head-title{
+			padding-top:100px;
+			padding-bottom:50px;
+			font-size: 1.5em;			
+		}
+		p.quote{
+			font-style: italic;
+			font-size: 1.8em;
+		}
+		p.person{
+			font-size: 1.2em;
+			text-transform:uppercase;
+    		padding-top: 15px;
+		}
+	}
+}
+//heading colors
+h1, h2, h3, h4, h5, h6, .entry-title a, .site-title{
+	color:$dark;
+	font-weight: normal;
+}
+.alt-size-b.second p.text{
+	line-height: 2.25;
+}
+.col-md-2.alt-size-b.third p.text{
+	line-height: 2;	
+}
+.alt-size-a{
+	height: 375px;
+	h2{
+		text-align: center;
+		color: $light;
+		font-weight: normal;
+	    margin-bottom: 35px;
+	}
+	.alt-size-b{
+		height: 263px;
+		img{
+			filter:grayscale(100) contrast(100) invert(100)
+		}
+	}
+}
+.three-row{
+	background-image:url('./images/social-tiles-bg.jpg');
+    background-size: cover;    
+	min-height: 288px;
+	color: $light;
+    padding-top: 25px;
+    padding-bottom: 30px;	
+	.color{
+		div{
+			background-color:rgba(199, 79, 79,0.61);
+			min-height: 235px;
+			font-family: $serifFontFamily;
+			img{
+				padding-top: 7.5px;
+				padding-bottom: 6px;
+			}
+			.number{
+				font-size: 34px;
+			}
+			.head-title{
+				font-size:28px;
+				line-height: 1;
+			}
+			.text{
+				text-align: justify;
+				font-size: smaller;
+			}
+			.small{
+				font-size: smaller;
+			}
+			.middle{
+				font-weight: bold;
+			}
+		}
+		.initial{
+			text-align: center;
+			margin-right: 0.5%;
+    		width: 16.169%;
+		}
+		.second{
+			text-align: center;
+			// width: 16.169%;
+		}
+		.third{
+			text-align: center;
+			margin-left: 0.5%;
+			width: 16.16%;
+		}
+		min-height: 235px;
+	}
+}
+//about specific
+.about {
+	#static-section-2-area{
+		.wrap{
+			h2{
+				padding-top: 35px;
+			}
+			max-width: initial !important;	
+			.col-md-2{
+				text-align: center;
+				margin: auto;
+				h2{
+					margin: 0px !important;
+					padding: 0px !important;
+					line-height: 1;
+				}
+				p{
+					text-transform: uppercase;
+					font-size: smaller;
+				}
+			}		
+			p{
+				max-width: 1152px;
+				margin: auto;				
+			}
+				.row-a{
+					padding-top:100px;
+				}			
+				.row-b{
+					padding-top:50px;
+					padding-bottom: 30px !Important;
+				}	
+			
+		}
+	}
+}
+
+ul#menu-about {
+	max-width: 850px;
+    text-align: center;
+    margin: auto;
+	li,.nav-divider {
+		margin-left: 0px;
+    	list-style-type: none;
+ 	   display: inline;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    a,a:visited{
+	    	color: $textColor;
+	    }
+	}
+	li:last-child{
+		a{
+		.nav-divider{
+				display: none;
+			}
+		}
+	}
+}
+.nav-divider{
+	font-weight: normal !important;
+	padding-left: 5px;
+    padding-right: 5px;
 }

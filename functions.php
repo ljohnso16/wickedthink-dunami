@@ -151,7 +151,6 @@ function dunami_social_icons(){
 <a href="#" class="footer-logo"><img alt="" src="' . get_stylesheet_directory_uri() . '/images/ytube.png" /></a>';
 }
 function smb_footer() {
-	$footer_menu_args = array('echo' => false,);
 	echo wp_nav_menu( array(
 	                 'theme_location'  => 'footer',
 	                 'container_class' => 'col-md-6',
@@ -190,7 +189,7 @@ function gs_do_before_footer() {
 	if(!empty($staticsection5)){
 		echo '<div id="static-section-5-area"><div class="area-wrap">'.$staticsection5.'</div></div>';
 	}	
-	echo '<div id="lets-talk-footer"><div class="wrap"><h3>Let\'s Talk</h3><p>Stop focusing on <span>WHAT</span>, start knowing <span>WHO</span> matters.<br />Scedule your non-obligation demo today and see how the Dunami platform<br />can powerfully impact your organization</p><a class="dunami-effect btn btn-default" href="#" title="">Schedule Demo</a></div></div>';			
+	echo '<div id="lets-talk-footer"><div class="wrap"><h2>Let\'s Talk</h2><p>Stop focusing on <span>WHAT</span>, start knowing <span>WHO</span> matters.<br />Scedule your non-obligation demo today and see how the Dunami platform<br />can powerfully impact your organization</p><a class="dunami-effect btn btn-default" href="#" title="">Schedule Demo</a></div></div>';			
 }
 add_shortcode('focus-who-matters','generate_focus_how_matters');
 function generate_focus_how_matters(){
@@ -201,36 +200,36 @@ return '
         <div class="carousel-inner">
 
             <div class="id-key-influences item active">
-                <div class="col-md-3"></div>
+                <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Identify Key Influencers</h2>
-					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
             </div>
 
 
             <div class="item ignore-irrelevant">
-                <div class="col-md-3"></div>
+                <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Ignore The Irrelevant</h2>
-					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
             </div>
             <div class="item see-connections">
-                <div class="col-md-3"></div>
+                <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>See The Connections</h2>
-					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
             </div>
             <div class="item discover-networks">
-                <div class="col-md-3"></div>
+                <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Discover Critical Networks</h2>
-					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. The specific individuals likely to drive the next brand event, critical action or brewing crisis.
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
             </div>            
@@ -263,6 +262,231 @@ return '
 ';
 }
 
+add_shortcode('success-stories','generate_success_stories');
+function generate_success_stories(){
+return '
+<div id="success-stories" class="dunami-carousel-custom carousel slide" data-ride="carousel">
+    <div class="carousel-outer">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+            	<p class="head-title">Success Stories from those using Dunami</p>
+            	<p class="quote">"Praesent sapien massa, convallis a pellentesque nec, egestas non nisi..."</p>
+            	<p class="person">Amazon Represenative</p>
+            </div>
+            <div class="item">
+            	<p class="head-title">Success Stories from those using Dunami</p>
+            	<p class="quote">"Praesent sapien massa, convallis a pellentesque nec, egestas non nisi..."</p>
+            	<p class="person">NBC Represenative</p>
+            </div>
+            <div class="item">
+            	<p class="head-title">Success Stories from those using Dunami</p>
+            	<p class="quote">"Praesent sapien massa, convallis a pellentesque nec, egestas non nisi..."</p>
+            	<p class="person">Coca-Cola Represenative</p>
+            </div>
+            <div class="item">
+            	<p class="head-title">Success Stories from those using Dunami</p>
+            	<p class="quote">"Praesent sapien massa, convallis a pellentesque nec, egestas non nisi..."</p>
+            	<p class="person">AT&T Represenative</p>
+            </div>
+        </div>
+    </div>    
+	<div class="indicator-row">
+	    <div class="space">&nbsp;</div>
+	    <ol class="carousel-indicators">	   	    
+		        <li data-target="#success-stories" data-slide-to="0" class="indicator active"><img src="'.get_stylesheet_directory_uri().'/images/amazon.png" /></li>
+		        <li data-target="#success-stories" data-slide-to="1" class="indicator"><img src="'.get_stylesheet_directory_uri().'/images/nbc.png" /></li>
+		        <li data-target="#success-stories" data-slide-to="2" class="indicator"><img src="'.get_stylesheet_directory_uri().'/images/coke.png" /></li>
+		        <li data-target="#success-stories" data-slide-to="3" class="indicator"><img src="'.get_stylesheet_directory_uri().'/images/att.png" /></li>
+	    </ol>
+	    <div class="space">&nbsp;</div>
+    </div>
+</div>
+';
+}
+add_shortcode('social-media-counter','generate_socialmedia_counter');
+function generate_socialmedia_counter(){
+return '
+<div class="three-row">
+	<div class="color">
+		<div class="col-md-3 hidden-sm hidden-xs">&nbsp;</div>
+		<div class="col-md-2 initial">
+			<img src="'.get_stylesheet_directory_uri().'/images/twitter-thumb.png">
+			<p class="number">5,700+</p>
+			<p class="middle">Tweets happen every second</p>
+			<p class="small">241 million active users</p>
+		</div>
+		<div class="col-md-2 second">
+			<img src="'.get_stylesheet_directory_uri().'/images/facebook-thumb.png">
+			<p class="number">1,000,000</p>
+			<p class="middle">links shared every second</p>
+			<p class="small">1+ billion active users</p>			
+		</div>
+		<div class="col-md-2 third">
+			<img src="'.get_stylesheet_directory_uri().'/images/instagram-thumb.png">
+			<p class="number">60,000,000</p>
+			<p class="middle">pictures uploaded every day</p>
+			<p class="small">200 million active users</p>			
+		</div>
+		<div class="col-md-3 hidden-sm hidden-xs">&nbsp;</div>
+	</div>
+</div>
+';
+}
+//generate brandmanagment menu
+add_shortcode('about-menu', 'print_about_menu');
+function print_about_menu($atts, $content = null) {   
+    return wp_nav_menu( array(
+	                 'echo' => false,
+	                 'theme_location'  => 'about',
+	                 'container_class' => '',
+                     'link_after'      => '<div class="nav-divider"> | </div>'
+	                 //'items_wrap'      => '<ul id="menu-footer" class="menu"><h4>More from Dunami</h4>%3$s</ul>'
+	));
+}
+
+
+//[how-do-this]
+add_shortcode('how-do-this','generate_how_do_this');
+function generate_how_do_this(){
+return '
+<div class="three-row alt-size-a">
+<div class="col-md-12 "><h2>How Do We Do This?</h2></div>
+	<div class="color">
+		<div class="col-md-3 hidden-sm hidden-xs alt-size-b">&nbsp;</div>
+		<div class="col-md-2 initial alt-size-b">
+			<img src="'.get_stylesheet_directory_uri().'/images/how-1.png">
+			<p class="head-title">Patendted Relationship<br/>Network Analytics</p>
+			<p class="text">By smartly spanning out across relationships within a specific topic or group, Dunami allows you to know who is (and is not) a meaningful part of a topic of discussion and find the entire network of those who matter of social activity.</p>
+		</div>
+		<div class="col-md-2 alt-size-b second">
+			<img src="'.get_stylesheet_directory_uri().'/images/how-3.png">
+			<p class="head-title">Proprietary Influencer<br/>Mathematics</p>
+			<p class="text">Dunami breaks through the boundaries of influence measurement to allow you to precisely score the people who are most important within this entire network</p>			
+		</div>
+		<div class="col-md-2 alt-size-b third">
+			<img src="'.get_stylesheet_directory_uri().'/images/how-2.png">
+			<p class="head-title">Behavioral Attribute<br />Modeling</p>
+			<p class="text">Dinami helps you figure out the interests, activties, demographics, group affiliations, etc., of these people through the application of artifical intelligence learning algorithms.</p>			
+		</div>
+		<div class="col-md-3 alt-size-b hidden-sm hidden-xs">&nbsp;</div>
+	</div>
+</div>
+';
+}
+add_shortcode('dunami-leadership','generate_dunami_leadership');
+function generate_dunami_leadership(){
+	return '
+<div class="leardership">
+	<div class="row-a">
+		<div class="col-md-3 hidden-sm hidden-xs">&nbsp;</div>
+		<div class="col-md-2"><img src="'.get_stylesheet_directory_uri().'/images/leadership-1.png"><h2>Tony Marshall</h2><p>President and Chief Technical Officer</p></div>
+		<div class="col-md-2"><img src="'.get_stylesheet_directory_uri().'/images/leadership-2.png"><h2>Pat Butler</h2><p>Chief Executive Officer & Chief Scientist</p></div>
+		<div class="col-md-2"><img src="'.get_stylesheet_directory_uri().'/images/leadership-3.png"><h2>Andrew Woglom</h2><p>Chief Financial Officer</p></div>
+		<div class="col-md-3 hidden-sm hidden-xs">&nbsp;</div>
+		<div class="clearfix">&nbsp;</div>
+	</div>
+	<div class="clearfix">&nbsp;</div>
+	<div class="row-b">
+		<div class="col-md-4 hidden-xs">&nbsp;</div>
+		<div class="col-md-2"><img src="'.get_stylesheet_directory_uri().'/images/leadership-4.png"><h2>Steve Davis</h2><p>Chief Business Development Officer</p></div>
+		<div class="col-md-2"><img src="'.get_stylesheet_directory_uri().'/images/leadership-5.png"><h2>Mark Schwalm</h2><p>Executive Vice-President</p></div>
+		<div class="col-md-4 hidden-xs">&nbsp;</div>
+		<div class="clearfix">&nbsp;</div>
+	</div>
+</div>
+	';
+}
+
+add_shortcode('dunami-platform','generate_dunami_platform');
+function generate_dunami_platform(){
+return '
+<div id="dunami-platform" class="dunami-carousel-custom carousel slide" data-ride="carousel">
+    <div class="carousel-outer">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="id-key-influences item active">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Identify Key Influencers</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
+            </div>
+
+
+            <div class="item ignore-irrelevant">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Managment</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
+            </div>
+            <div class="item see-connections">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Public Relations</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
+            </div>
+            <div class="item discover-networks">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Corporate Communications</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
+            </div>
+            <div class="item ignore-irrelevant">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Corporate Research</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
+            </div>
+            <div class="item see-connections">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Social Media</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
+            </div>  
+        </div>
+        <!-- Controls -->
+        <div class="controls">
+	        <a class="" href="#dunami-platform" data-slide="prev">
+	            <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+	        </a>
+	        <a class="" href="#dunami-platform" data-slide="next">
+	            <span class="pull-right glyphicon glyphicon-chevron-right"></span>
+	        </a>
+	        <div class=clearfix"></div>
+		</div>        
+    </div>    
+    <!-- Indicators -->
+
+    
+	<div class="indicator-row">
+		<div class="title">The Power<br />of Dunami\'s <br />Platform</div>	        
+	    <ol class="carousel-indicators">	   	    
+		        <li data-target="#dunami-platform" data-slide-to="0" class="indicator active">Brand<br />Managment</li>
+		        <li data-target="#dunami-platform" data-slide-to="1" class="indicator">Public<br /> Relations</li>
+		        <li data-target="#dunami-platform" data-slide-to="2" class="indicator">Corporate<br />Communications</li>
+		        <li data-target="#dunami-platform" data-slide-to="3" class="indicator">Corporate<br />Research</li>
+		        <li data-target="#dunami-platform" data-slide-to="4" class="indicator">Social<br />Media</li>
+		        <li data-target="#dunami-platform" data-slide-to="5" class="indicator">Advertising<br />Agencies</li>
+	    </ol>
+	    <div class="space">&nbsp;</div>
+    </div>
+</div>
+';
+}
+
 /**
  * Enqueue and Register Scripts - Twitter Bootstrap, Font-Awesome, and Common.
  */
@@ -284,17 +508,3 @@ function gs_mobile_navigation() {
 	
 	gs_navigation( 'mobile', $mobile_menu_args );
 }
-
-// Add Widget Area After Post
-// add_action('genesis_after_entry', 'gs_do_after_entry');
-// function gs_do_after_entry() {
-//  	if ( is_single() ) {
-//  	genesis_widget_area( 
-//                 'after-post', 
-//                 array(
-//                         'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">', 
-//                         'after' => '</div></aside><!-- end #home-left -->',
-//                 ) 
-//         );
-//  }
- //}

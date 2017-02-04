@@ -113,10 +113,9 @@ header.site-header{
 	width: 100% !important;
 }
 //solil slider
-
-#soliloquy-27,#soliloquy-39{
+ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear{
 	.soliloquy-caption-inside {
-	    padding-top: 23% !important;
+	    padding-top: 12% !important;
 	    background: transparent !important;
 	    font-size: 2em !important;
 		p.soliloquy-fc-caption-title {
@@ -130,12 +129,17 @@ header.site-header{
 			padding-bottom:45px;
 		}
 	}
-	img#soliloquy-image-32,img#soliloquy-image-41{
+	img{
 		width:100% !important;
 	}
 
 }
-
+//positoins the homes caption properly
+.home ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear{
+	.soliloquy-caption-inside {
+	    padding-top: 23% !important;
+	}
+}
 /*Dunami Effect BTN*/
 a.dunami-effect.btn.btn-default {
     padding: 15px 20px;
@@ -187,6 +191,7 @@ a.dunami-effect.btn.btn-default.reverse:hover {
     margin-bottom: -1px;
     margin: 20px auto;
     width: 100%;
+    margin-top: 0px !important;
 	.indicator-row    {
 		position: relative;
 		width: 100%;
@@ -352,7 +357,28 @@ a.dunami-effect.btn.btn-default.reverse:hover {
 	background-size: cover;		
 	background-attachment: fixed;
 }
-
+//solutions fowm
+.brand-management.item {
+	background-image:url('./images/brand-management.jpg');
+	background-size: cover;		
+	background-attachment: fixed;
+}
+.public-relations,.social-media{
+	background-image:url('./images/public-realtions.jpg');
+	background-size: cover;		
+	background-attachment: fixed;
+}
+.corporate.item{
+	background-image:url('./images/communication.jpg');
+	background-size: cover;		
+	background-attachment: fixed;
+}
+#hands-accross-table {
+	// background-color:blue;
+	background-image:url('./images/hands-accross-table.jpg');
+	background-size: cover;		
+	background-attachment: fixed;
+}
 
 //extra footer
 div#lets-talk-footer{
@@ -492,10 +518,26 @@ h1, h2, h3, h4, h5, h6, .entry-title a, .site-title{
 	}
 	.alt-size-b{
 		height: 263px;
+
 		img{
 			filter:grayscale(100) contrast(100) invert(100)
 		}
 	}
+}
+
+.platform .alt-size-a{
+	background-image:url('./images/alt-how-do-this.png') !important;
+    background-size: cover;
+    background-attachment:fixed;
+	.color{
+		div{
+			background-color:$textColor;
+		}
+	}
+    h2{
+    	color: $dark;
+    }
+
 }
 .three-row{
 	background-image:url('./images/social-tiles-bg.jpg');

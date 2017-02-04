@@ -406,33 +406,25 @@ return '
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
 
-            <div class="id-key-influences item active">
+            <div class="brand-management item active">
                 <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
-					<h2>Identify Key Influencers</h2>
+					<h2>brand Managment</h2>
 					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
             </div>
 
 
-            <div class="item ignore-irrelevant">
-                <div class="col-md-3">&nbsp;</div>
-                <div class="text col-md-4">
-					<h2>Brand Managment</h2>
-					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
-                </div>                
-                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
-            </div>
-            <div class="item see-connections">
+            <div class="item public-relations">
                 <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Public Relations</h2>
 					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
                 </div>                
-                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
-            </div>
-            <div class="item discover-networks">
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
+            </div>            
+            <div class="item corporate">
                 <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Corporate Communications</h2>
@@ -448,14 +440,22 @@ return '
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>
             </div>
-            <div class="item see-connections">
+            <div class="item social-media">
                 <div class="col-md-3">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Social Media</h2>
 					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
-            </div>  
+            </div>
+            <div class="item" id="hands-accross-table">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Advertising Agencies</h2>
+					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" /></div><div class="clearfix"></div>                
+            </div>			   
         </div>
         <!-- Controls -->
         <div class="controls">

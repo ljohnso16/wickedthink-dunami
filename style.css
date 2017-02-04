@@ -9418,23 +9418,27 @@ header.site-header {
   width: 100% !important;
 }
 
-#soliloquy-27 .soliloquy-caption-inside, #soliloquy-39 .soliloquy-caption-inside {
-  padding-top: 23% !important;
+ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside {
+  padding-top: 12% !important;
   background: transparent !important;
   font-size: 2em !important;
 }
-#soliloquy-27 .soliloquy-caption-inside p.soliloquy-fc-caption-title, #soliloquy-39 .soliloquy-caption-inside p.soliloquy-fc-caption-title {
+ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside p.soliloquy-fc-caption-title {
   font-size: 2em;
   text-transform: uppercase;
   font-style: italic;
   font-weight: bold;
   padding-bottom: 45px;
 }
-#soliloquy-27 .soliloquy-caption-inside p.soliloquy-fc-caption-body, #soliloquy-39 .soliloquy-caption-inside p.soliloquy-fc-caption-body {
+ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside p.soliloquy-fc-caption-body {
   padding-bottom: 45px;
 }
-#soliloquy-27 img#soliloquy-image-32, #soliloquy-27 img#soliloquy-image-41, #soliloquy-39 img#soliloquy-image-32, #soliloquy-39 img#soliloquy-image-41 {
+ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear img {
   width: 100% !important;
+}
+
+.home ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside {
+  padding-top: 23% !important;
 }
 
 /*Dunami Effect BTN*/
@@ -9485,6 +9489,7 @@ a.dunami-effect.btn.btn-default.reverse:hover {
   margin-bottom: -1px;
   margin: 20px auto;
   width: 100%;
+  margin-top: 0px !important;
 }
 .dunami-carousel-custom .indicator-row {
   position: relative;
@@ -9635,6 +9640,30 @@ a.dunami-effect.btn.btn-default.reverse:hover {
   background-attachment: fixed;
 }
 
+.brand-management.item {
+  background-image: url("./images/brand-management.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.public-relations, .social-media {
+  background-image: url("./images/public-realtions.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.corporate.item {
+  background-image: url("./images/communication.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#hands-accross-table {
+  background-image: url("./images/hands-accross-table.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 div#lets-talk-footer {
   background-image: url("./images/lets-talk-bg.jpg");
   min-height: 310px;
@@ -9769,6 +9798,18 @@ h1, h2, h3, h4, h5, h6, .entry-title a, .site-title {
 }
 .alt-size-a .alt-size-b img {
   filter: grayscale(100) contrast(100) invert(100);
+}
+
+.platform .alt-size-a {
+  background-image: url("./images/alt-how-do-this.png") !important;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.platform .alt-size-a .color div {
+  background-color: #808080;
+}
+.platform .alt-size-a h2 {
+  color: #000;
 }
 
 .three-row {

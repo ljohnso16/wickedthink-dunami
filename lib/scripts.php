@@ -53,7 +53,7 @@ function gs_register_scripts() {
 	 * @link http://fortawesome.github.com/Font-Awesome/
 	 */
 	//wp_register_style( 'gs-font-awesome', CHILD_CSS . '/' . gs_script_suffix( 'font-awesome', 'css' ), array(), '4.0.3' );
-	wp_register_style( 'gs-font-awesome-cdn', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', array(), '1.0.0' );
+	wp_register_style( 'gs-font-awesome-cdn', '//use.fontawesome.com/f074dde38b.css', array(), '1.0.0' );
 	
 
 

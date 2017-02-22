@@ -81,7 +81,7 @@ header.site-header{
 	-webkit-transition: all 0.9s ease;
 	transition: all 0.9s ease;
 	z-index:100;
-	.site-title a img{
+	.site-title{
 		width: 100% !important;
 		margin-left: 0px !important;
 		margin-top:0px !important;		
@@ -91,7 +91,7 @@ header.site-header{
 	}
 }
 
-.header-image .site-title a{
+.header-image .site-title{
 	min-height:initial !important;
 }
 header.site-header.theme-change {
@@ -102,7 +102,7 @@ header.site-header.theme-change {
 	.genesis-nav-menu a {
 	    padding-top: 49px;
 	}
-	.site-title a img{
+	.site-title{
 	    width: 90% !important;
     	padding-top: 2.2%;
 	}
@@ -133,11 +133,41 @@ ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear{
 	}
 
 }
+.home ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear{
+	.soliloquy-caption-inside {
+	    padding-top: 12% !important;
+	    background: transparent !important;
+	    font-size: 2em !important;
+		p.soliloquy-fc-caption-title {
+		    font-size: 2em;
+	    	text-transform: uppercase;
+	    	font-style: italic;
+    		// font-weight: bold;
+    		padding-bottom:45px;
+		}
+		p.soliloquy-fc-caption-body{
+			padding-bottom:45px;
+		}
+	}
+	img{
+		width:100% !important;
+	}
+	img.sol-ico{
+		width:initial !important;
+	}
 
+}
 
-#static-section-4-area div.wrap div a.dunami-effect.btn.btn-default {
+.brand-management #static-section-4-area div.wrap div a.dunami-effect.btn.btn-default {
     margin-bottom: 50px;
     margin-top: 30px;
+    width:280px;
+}
+.brand-management #static-section-4-area div.wrap div a.dunami-effect.btn.btn-default:first-child{
+	margin-right:7px;
+}
+.brand-management #static-section-4-area div.wrap div a.dunami-effect.btn.btn-default:last-child{
+	margin-left:7px;
 }
 /*Dunami Effect BTN*/
 a.dunami-effect.btn.btn-default,.gform_button.button,input.gform_next_button {
@@ -173,7 +203,15 @@ a.dunami-effect.btn.btn-default.reverse:hover {
     color: $color-extra;
     box-shadow: inset 0 0 0 50px rgba(255,255,255,0.9);
 }
-
+a.dunami-effect.btn.btn-default.brand-management{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid $light;
+    color: $light;
+    margin-top: 2em;
+}
+#public-relations a.dunami-effect.btn.btn-default.brand-management{
+	margin-top:30px;
+}
 //home page specific tags
 //positoins the homes caption properly
 .home 
@@ -202,6 +240,20 @@ a.dunami-effect.btn.btn-default.reverse:hover {
 	    	}
     	}
     	
+
+	}
+	div#static-section-4-area{
+		h3{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			max-width: 850px;
+			margin:auto;
+		}
+		p{
+			max-width: 850px;
+			margin:auto;
+			padding-bottom:50px;			
+		}
 
 	}
 	.content {
@@ -235,7 +287,7 @@ a.dunami-effect.btn.btn-default.reverse:hover {
 	}
 	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear{
 		.soliloquy-caption-inside {
-		    padding-top: 23% !important;
+		    padding-top: 16% !important;
 		}
 	}
 	div#static-section-2-area{
@@ -276,6 +328,8 @@ a.dunami-effect.btn.btn-default.reverse:hover {
 }
 //modified carosel sass
 .dunami-carousel-custom {
+    -webkit-box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);		
 	position: relative;
     text-align: center;
     background: #fff;
@@ -472,6 +526,7 @@ a.dunami-effect.btn.btn-default.reverse:hover {
 	background-image:url('./images/brand-loyalty.jpg');
 	background-size: cover;		
 	background-attachment: fixed;
+	min-height:295px;
 }
 //extra footer
 div#lets-talk-footer{
@@ -660,13 +715,15 @@ h1, h2, h3, h4, h5, h6, .entry-title a, .site-title{
 	font-weight: normal;
 }
 .alt-size-b.second p.text{
-	line-height: 2.25;
+	// line-height: 2.25;
 }
 .col-md-2.alt-size-b.third p.text{
-	line-height: 2;	
+	// line-height: 2;	
 }
 .alt-size-a{
-	min-height: 375px !important;
+	min-height: 403px !important;
+    -webkit-box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);	
 	h2{
 		text-align: center;
 		color: $light;
@@ -701,7 +758,7 @@ h1, h2, h3, h4, h5, h6, .entry-title a, .site-title{
 .three-row{
 	background-image:url('./images/social-tiles-bg.jpg');
     background-size: cover;    
-	min-height: 288px;
+	min-height: 315px;
 	color: $light;
     padding-top: 25px;
     padding-bottom: 30px;	
@@ -709,7 +766,7 @@ h1, h2, h3, h4, h5, h6, .entry-title a, .site-title{
 		div{
 			float: left;
 			background-color:rgba(199, 79, 79,0.61);
-			min-height: 263px;
+			min-height: 276px;
 			font-family: $serifFontFamily;
 			img{
 				padding-top: 7.5px;
@@ -751,27 +808,41 @@ h1, h2, h3, h4, h5, h6, .entry-title a, .site-title{
 			text-align: center;
 			margin-right: 0.5%;
     		width: 16.169%;
+    		padding-top: 1.5%;
 		}
 		.second{
 			text-align: center;
 			width: 16.169%;
+			padding-top: 1.5%;
 		}
 		.third{
 			text-align: center;
 			margin-left: 0.5%;
 			width: 16.16%;
+			padding-top: 1.5%;
 		}
 		// min-height: 235px;
 	}
 }
 //about specific
 .about {
+	.site-inner {	
+	    padding-top: 4rem;
+	    .wrap{
+	    	max-width: 930px;
+	    }
+	}	
 	#static-section-2-area{
-
+    -webkit-box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);
 		.wrap{
 
 			h2{
 				padding-top: 35px;
+			}
+			p{
+				max-width: 936px;
+				margin:auto;
 			}
 			.row-a .leader{width:33%;}
 			.row-b .leader{width:50%;}
@@ -790,11 +861,15 @@ h1, h2, h3, h4, h5, h6, .entry-title a, .site-title{
 				}
 			}					
 			.row-a{
-				padding-top:100px;
+				padding-top:60px;
+				max-width: 805px;
+				margin:auto;
 			}			
 			.row-b{
 				padding-top:50px;
 				padding-bottom: 30px !Important;
+				max-width: 505px;
+				margin:auto;
 			}	
 			
 		}
@@ -812,7 +887,7 @@ ul#menu-about {
 	    font-weight: bold;
 	    text-transform: uppercase;
 	    a,a:visited{
-	    	color: $textColor;
+	    	color: $textColor;	
 	    }
 	}
 	li:last-child{
@@ -828,25 +903,49 @@ ul#menu-about {
 	padding-left: 5px;
     padding-right: 5px;
 }
-.brand-management h3{
-	
-		color:$color-extra;
-	
+.brand-management {
+	.entry-content{
+		h3{
+			color: $color-extra;
+		}
+	}
+	div#static-section-1-area{
+
+	}
+	#static-section-4-area{
+		.wrap{
+			h3{
+				padding-top:30px;
+				padding-bottom:35px;
+				color:$color-extra;
+			}
+			h3,p{
+							
+				max-width: 930px;
+				margin: auto;			
+			}
+		}
+	}	
 }
 .contact-form{
 	.gform_body{
 		margin:auto;
 		text-align: center;
+		width:930px !important;
+	}
+	ul li{
+		margin-left:0px;
 	}
 	label.gfield_label{
 		display: none !important;
 	}
 	li.gfield,.gfield.field_sublabel_below.field_description_below.gfield_visibility_visible{
-		display: inline-block;
-		width: 500px !important;
+	
+	 	display: inline-block;
+	    width: 460px;
 	}
 	li.gfield,.ginput_container.ginput_container_text {
- 	   width: 500px !important;
+ 	   // width: 500px !important;
 	}
 	input.medium,select.medium {
 	    width: 95% !important;
@@ -864,9 +963,10 @@ ul#menu-about {
 		text-align: center !important;
 		width: 90% !important;
 		margin: auto;
+		padding-top: 30px;
 	}
 	div.ginput_container {
-	    width: 500px !important;
+	    // width: 500px !important;
 	}	
 }
 .schedule-demo{
@@ -1011,8 +1111,18 @@ ul#menu-about {
 	.carousel-inner div.item {
 	    margin: auto;
 		min-height: 300px;
+	    .center-image{
+			width:16.66666667%;
+			float:left;
+	    }
+	    .left-text{
+			width:83.33333333%;
+			float:left;
+			padding: 0px;
+	    }
 	    .tabler{
 			display: table;
+			
 		    div{
 		    	display: table-cell;
 		    	vertical-align: middle;		    	
@@ -1038,6 +1148,15 @@ ul#menu-about {
 .site-inner {
     -webkit-box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0px 7px 15px -5px rgba(0, 0, 0, 0.3);
+	@include clearfix;
+	@include rem(padding-top, 36px);
+	.entry-content{
+		p,h2,h3,div{
+			max-width: 930px;
+			margin: auto;
+			padding: 0px;
+		}
+	}
 }
 
 // /////////////////////custom with default breakpoints/////////////////////////////
@@ -1067,6 +1186,14 @@ ul#menu-about {
 	}
 
 }
+@media only screen and (max-width : 1400px) {
+	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside p.soliloquy-fc-caption-title{
+		padding-bottom:0px;
+	}
+	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside {
+	    padding-top: 6% !important;	
+	}
+}
 @media only screen and (max-width : 1365px) {
 	.dunami-carousel-custom .carousel-outer .controls{
 		display: none;
@@ -1093,22 +1220,31 @@ ul#menu-about {
 	{
 		ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear{
 			.soliloquy-caption-inside {
-			    padding-top: 13%;
+			    padding-top: 13% !important;
 			}
 		}
 	}
-	.title-area{
-		max-width: 220px !important;
+	// .title-area{
+	// 	max-width: 220px !important;
+	// }
+	// header.site-header.theme-change .site-title a img{
+	// 	padding-top:10% !important;
+	// }
+	header.site-header.theme-change .site-title{
+		width: 100% !important;
+    	padding-top: 0%;
 	}
-	header.site-header.theme-change .site-title a img{
-		padding-top:10% !important;
+	.site-header .title-area {
+	    width: 250px !important;
+	    margin-left: 6% !important;
+	    margin-top: 2%;
 	}
 	.primary .toggle-switch{
-		display: block;
-	}
+		display: block !important;
+	}	
 }
 @media only screen and (max-width : 1110px) {
-
+		
 	.dunami-carousel-custom .carousel-inner div.item.active .zoom-picture.col-md-5 img{
 		display: none;
 	}
@@ -1129,9 +1265,14 @@ ul#menu-about {
 		}
 	}
 }
-@media only screen and (max-width : 1057px) {
-    .title-area{
-		max-width: 110px !important;
+@media only screen and (max-width : 1052px) {
+ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside p.soliloquy-fc-caption-title{
+	font-size:1em;
+}
+}
+@media only screen and (max-width : 1049px) {
+	.site-header .title-area{
+		width:200px !important;
 	}
 }
 
@@ -1146,9 +1287,16 @@ ul#menu-about {
 	}
 
 }
-
+@media only screen and (max-width : 1025px) {
+	.site-header .title-area{
+		width:150px  !important;
+		margin-left: 1% !important
+	}
+}
 @media only screen and (max-width : 992px) {
-
+	footer.site-footer .wrap ul#menu-footer li a,footer.site-footer .wrap ul#menu-footer h4 {
+	    text-align: center;
+	}
 }
 @media only screen and (max-width : 960px) {
 	.dunami-carousel-custom .indicator-row div.space{
@@ -1157,18 +1305,15 @@ ul#menu-about {
 	.home ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside{
 		padding-top: 12% !important;
 	}
-	.title-area{
-		max-width: 102px !important;
+
+	ul.menu-primary li.menu-item:first-child a{
+	    padding-left: 0px !important;
+
 	}
-	.site-header .genesis-nav-menu a {
-	    padding-top: 13px !important;;
-	    padding-right: 22px !important;;
-	    padding-bottom: 13px !important;;
-	    padding-left: 22px !important;;
+	ul.menu-primary li.menu-item:last-child a{
+		padding-right: 0px !important;
 	}
-	p.site-title{
-		line-height: 0.6;
-	}	
+
 }
 @media only screen and (max-width : 950px) {
 	#static-section-5-area .three-row-padder {
@@ -1182,6 +1327,16 @@ ul#menu-about {
 		width: 100%;
 		float: none;
 		margin-bottom: 10px;
+	}
+}
+@media only screen and (max-width : 932px) {
+	.contact-form .gform_body {
+	    width: 920px !important;
+	}
+}
+@media only screen and (max-width : 930px) {
+	.home ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside p.soliloquy-fc-caption-title{
+		padding-bottom: 28px;
 	}
 }
 @media only screen and (max-width : 910px) {
@@ -1203,6 +1358,14 @@ ul#menu-about {
 		}
 	}
 }
+@media only screen and (max-width : 890px) {	
+	.site-header .title-area{
+		width:100px  !important;
+		margin-left: 0px !important
+	}
+
+}
+
 @media only screen and (max-width : 887px) {	
 	.alt-size-a{
 		div.alt-size-b {
@@ -1214,24 +1377,88 @@ ul#menu-about {
 	}
 
 }
+@media only screen and (max-width : 838px) {	
+	   .dunami-overview-menu {
+		    .center-image{
+				width:16.66666667%;
+				float:left;
+		    }
+		    .left-text{
+				width:83.33333333%;
+				float:left;
+		    }
+		}
+}
+@media only screen and (max-width : 829px) {
+	header.site-header {
+    	position: initial !important;
+	}
+	.site-header .title-area{
+		width:100%  !important;
+		margin-left: 0px !important;
+		margin-top:0px !important;
+	}
+	header.site-header .site-title a{
+		margin: auto;
+	    text-align: center;
+	    display: block;
+	}
+	.nav-primary{
+		float:none;
+		text-align: center;
+	}
+	.genesis-nav-menu a{
+		padding-top:0px !important;
+		padding-bottom:0px !important;
+	}
+}
+
 @media only screen and (max-width : 790px) {
 	.success-triangle,.triangle{
 		display: none !important;
 	}
 }
+
+
 @media only screen and (max-width : 772px) {
+	.home ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside{
+		padding-top: 0px !important;
+	}
+	// header.site-header.theme-change .site-title a img {	
+	//     padding-top: 10% !important;
+	// }
+
+}
+@media only screen and (max-width : 768px) {
 	header.site-header{
 		position: initial !important;
 	}
-	.home ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside{
-		padding-top: 1% !important;
+	.site-header .title-area{
+		width: 100% !important;
+		margin-left:0px !important;
+		margin-top:0px !important;
 	}
-	header.site-header.theme-change .site-title a img {	
-	    padding-top: 10% !important;
+}
+@media only screen and (max-width : 740px) {
+	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside {
+	    padding-top: 0% !important;	
 	}
-
+	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear img.sol-ico {
+	    width: 50px !important;
+	}	
 }
 @media only screen and (max-width : 710px) {	
+	   .dunami-overview-menu {
+		    .left-text,.center-image{
+				width:90% !important;
+				float:none !important;
+				margin: auto !important;
+		    }		   
+		}
+.dunami-overview-menu .carousel-inner div.item .tabler div{
+	height: auto !important;
+
+}		
 	.alt-size-a{
 		div.alt-size-b {			
 		    width: 100% !important;		    
@@ -1258,13 +1485,43 @@ ul#menu-about {
 				padding-bottom: 0px;	
 			}
 			p.soliloquy-fc-caption-body {
-				padding-bottom: 12px;
+				// padding-bottom: 12px;
 			}					
 		}
 		
 
 	}
 
+}
+@media only screen and (max-width : 660px) {
+	.home{
+		ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside{
+			p.soliloquy-fc-caption-title{
+				padding-bottom: 0px;
+				font-size:48px 
+			}
+			p.soliloquy-fc-caption-body {				
+				font-size: 28px;
+			}					
+		}
+		
+
+	}
+
+}
+@media only screen and (max-width : 630px) {
+	div#advertising-solutions{
+		display: none;
+	}
+}
+
+@media only screen and (max-width : 620px) {
+	.brand-management #static-section-4-area div.wrap div a.dunami-effect.btn.btn-default:first-child{
+		margin-right:0px !important;
+	}
+	.brand-management #static-section-4-area div.wrap div a.dunami-effect.btn.btn-default:last-child{
+		margin-left:0px !important;
+	}
 }
 @media only screen and (max-width : 600px) {
 	.home{
@@ -1282,6 +1539,9 @@ ul#menu-about {
 
 }
 @media only screen and (max-width : 540px) {
+	.dunami-overview-menu .indicator-row div.space{
+		display: none;
+	}
 	.contact-form {
 		div.ginput_container,.ginput_container.ginput_container_text{
 			width: 100% !important;
@@ -1299,6 +1559,16 @@ ul#menu-about {
 	    margin:auto;
 	}	
 }
+@media only screen and (max-width : 530px) {
+	.row-a .leader:nth-child(1){width:50% !important;}
+	.row-a .leader:nth-child(2){width:50% !important;}
+	.row-a .leader:nth-child(3){width:100% !important;float:none !important;}
+	.row-b{ 
+		padding-top: 15px !important;
+		.leader{width:50%;}
+	}
+	.row-a .clearfix,.leardership .clearfix{display:none;}
+}
 @media only screen and (max-width : 515px) {
 	#brandmanagement-menu .space,div#managment-solutions .dunami-carousel-custom .indicator-row div.title {
 	    display: none;
@@ -1308,7 +1578,7 @@ ul#menu-about {
 	.home{
 		ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside{
 			p.soliloquy-fc-caption-title{
-				padding: 2% 0px;
+				padding: 0px 0px;
 			}
 			p.soliloquy-fc-caption-body {
 				display: none;	
@@ -1319,8 +1589,27 @@ ul#menu-about {
 	}
 
 }
+
+@media only screen and (max-width : 477px) {
+	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside p.soliloquy-fc-caption-title{
+		font-size:0.8em
+	}
+	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear .soliloquy-caption-inside {
+	    font-size:0.8em
+	}
+	ul.soliloquy-slider.soliloquy-slides.soliloquy-wrap.soliloquy-clear img.sol-ico {
+	    width: 38px !important;
+	}	
+}
+
 @media only screen and (max-width : 465px) {
 	#who-matters{
 		display: none;
 	}
 }
+@media only screen and (max-width : 458px) {
+	#managment-solutions{
+		display: none;
+	}
+}
+

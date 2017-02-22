@@ -8,6 +8,12 @@
  })(document);
 
 jQuery(document).ready(function ($) {
+
+    $('.schedule-a-demo').find('a').attr('data-toggle', 'modal');
+    $('.schedule-a-demo').find('a').attr('data-target', '#schedule-demo');
+
+
+
   $('.video-link').click(function(){
     $('#youtube').modal('toggle');
     $('body').attr('style', '');//prevents bug when closing and opening one at the same time

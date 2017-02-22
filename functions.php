@@ -192,7 +192,7 @@ function gs_do_before_footer() {
 		echo '<div id="static-section-5-area"><div class="area-wrap">'.$staticsection5.'</div></div>';
 	}	
 	//mega footer here
-	echo '<div id="lets-talk-footer"><div class="wrap"><h2>Let\'s Talk</h2><p>Stop focusing on <span>WHAT</span>, start knowing <span>WHO</span> matters.<br />Scedule your non-obligation demo today and see how the Dunami platform<br />can powerfully impact your organization</p>    <a class="dunami-effect btn btn-default" href="#" title="" data-toggle="modal" data-target="#schedule-demo">Schedule Demo</a></div></div>';			
+	echo '<div id="lets-talk-footer"><div class="wrap"><h2>Let\'s Talk</h2><p>Stop focusing on <span>WHAT</span>, start knowing <span>WHO</span> matters.<br />Schedule your non-obligation demo today and see how the Dunami platform<br />can powerfully impact your organization</p>    <a class="dunami-effect btn btn-default" href="#" title="" data-toggle="modal" data-target="#schedule-demo">Schedule Demo</a></div></div>';			
 	//Modal/Lightbox for Schedule Demo Here
 	echo '
 		  <!-- Modal -->
@@ -220,11 +220,11 @@ function gs_do_before_footer() {
 		        </div>
 		        <div class="modal-body">
 					<h3 style="text-align: center;">The Dunami Difference:
-					Why who is <span>beter</span> than <span>what</span>.</h3>
+					Why who is <span>better</span> than <span>what</span>.</h3>
 					Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
 					<p style="text-align: center;"><img src="http://dunami.staging.wpengine.com/wp-content/uploads/2017/02/ytube-video.png" alt="Dunami YouTube Video Link"></p>
 					<h3 style="text-align: center;">We know who matters.</h3>
-					<h3 style="text-align: center;">Learn more wbout what Dunami can do for you.</h3>
+					<h3 style="text-align: center;">Learn more about what Dunami can do for you.</h3>
 					<p style="text-align: center;"><a class="dunami-effect btn btn-default video-link" href="#" title="" data-toggle="modal" data-target="#schedule-demo">Schedule Demo</a></p>
 		        </div>
 		      </div>		      
@@ -305,6 +305,7 @@ return '
 }
 
 add_shortcode('success-stories','generate_success_stories');
+add_shortcode('sucess-stories','generate_success_stories');
 function generate_success_stories(){
 return '
 <div id="success-stories" class="dunami-carousel-custom carousel slide" data-ride="carousel">
@@ -328,21 +329,21 @@ return '
             </div>
             <div class="item">
             	<p class="head-title">Success Stories from those using Dunami</p>
-            	<p class="quote">"Praesent sapien massa, convallis a pellentesque nec, egestas non nisi..."</p>
+            	<p class="quote">"Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt...."</p>
             	<p class="person">AT&T Represenative</p>
             </div>
         </div>
     </div>    
 	<div class="indicator-row">
 		<div class="success-triangle">&nbsp;</div>
-	    <div class="space">&nbsp;</div>
+	    <div class="space"></div>
 	    <ol class="carousel-indicators">	   	    
 		        <li data-target="#success-stories" data-slide-to="0" class="indicator success-indicator active"><img src="'.get_stylesheet_directory_uri().'/images/amazon.png" alt="Amazon Logo" /></li>
 		        <li data-target="#success-stories" data-slide-to="1" class="indicator success-indicator"><img src="'.get_stylesheet_directory_uri().'/images/nbc.png" alt="NBC Logo"/></li>
 		        <li data-target="#success-stories" data-slide-to="2" class="indicator success-indicator"><img src="'.get_stylesheet_directory_uri().'/images/coke.png" alt="Coco Cola Logo" /></li>
 		        <li data-target="#success-stories" data-slide-to="3" class="indicator success-indicator"><img src="'.get_stylesheet_directory_uri().'/images/att.png" alt="AT&T Logo"/></li>
 	    </ol>
-	    <div class="space">&nbsp;</div>
+	    <div class="space"></div>
     </div>
 </div>
 ';
@@ -490,14 +491,6 @@ return '
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
             </div>
-            <div class="item social-media">
-                <div class="col-md-3 padder">&nbsp;</div>
-                <div class="text col-md-4">
-					<h2>Social Media</h2>
-					<p>The Dunami Platform has the ability not only find, but also focus on, key networks and their associated leaders, activist, and influencers. These influencers are the very unieqe and specific, individuals likely to drive the next brand event, critical action or brewing crisis.</p><a class="dunami-effect btn btn-default reverse" href="#" title="">Learn More</a>
-                </div>                
-                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
-            </div>
             <div class="item" id="hands-accross-table">
                 <div class="col-md-3 padder">&nbsp;</div>
                 <div class="text col-md-4">
@@ -522,15 +515,14 @@ return '
 
     
 	<div class="indicator-row">
-		<div class="title">The Power<br />of Dunami\'s <br />Platform</div>	        
+		<div class="title"><div><span>The Power<br />of Dunami\'s <br />Platform<span></div></div>	        
 	    <div class="triangle"></div>
 	    <ol class="carousel-indicators">	   	    
 		        <li data-target="#dunami-platform" data-slide-to="0" class="indicator active">Brand<br />Managment</li>
 		        <li data-target="#dunami-platform" data-slide-to="1" class="indicator">Public<br /> Relations</li>
 		        <li data-target="#dunami-platform" data-slide-to="2" class="indicator">Corporate<br />Communications</li>
 		        <li data-target="#dunami-platform" data-slide-to="3" class="indicator">Corporate<br />Research</li>
-		        <li data-target="#dunami-platform" data-slide-to="4" class="indicator">Social<br />Media</li>
-		        <li data-target="#dunami-platform" data-slide-to="5" class="indicator">Advertising<br />Agencies</li>
+		        <li data-target="#dunami-platform" data-slide-to="4" class="indicator">Advertising<br />Agencies</li>
 	    </ol>
 	    <div class="space">&nbsp;</div>
     </div>
@@ -551,7 +543,7 @@ return '
                 <div class="col-md-3 padder">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Brand Loyalty</h2>
-					<p>The Dunami gives you the power to identify and specificaly message to those who are loyal to your brand. Connect, engage and build relationships with those best posed to become your brand ambassadors</p><a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<p>The Dunami gives you the power to identify and specifically message to those who are loyal to your brand. Connect, engage and build relationships with those best poised to become your brand ambassadors</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
             </div>
@@ -561,7 +553,7 @@ return '
                 <div class="col-md-3 padder">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Brand Awareness</h2>
-					<p>Dunami allows real-time analyzing of who is aware of your brand and interacting with it via social media and other avenues.</p><a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<p>Dunami allows real-time analyzing of who is aware of your brand and interacting with it via social media and other avenues.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
             </div>
@@ -569,7 +561,7 @@ return '
                 <div class="col-md-3 padder">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Brand Messaging</h2>
-					<p>Understanding the real impact on your brand of specific brand messages. Dunami allows you to collect feedback and better target key ideas to the right people.</p><a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<p>Understanding the real impact on your brand of specific brand messages. Dunami allows you to collect feedback and better target key ideas to the right people.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>
@@ -577,7 +569,7 @@ return '
                 <div class="col-md-3 padder">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Brand Positioning & Orientation</h2>
-					<p>The Dunami gives you the power to identify and specificaly message to those who are loyal to your brand. Connect, engage and build relationships with those best posed to become your brand ambassadors</p><a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<p>The Dunami gives you the power to identify and specifically message to those who are loyal to your brand. Connect, engage and build relationships with those best poised to become your brand ambassadors</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>            
@@ -597,11 +589,11 @@ return '
 
     
 	<div class="indicator-row">
-		<div class="title">Dunami Brand <br />Managment<br />Solutions</div>
+		<div class="title"><div><span>Dunami Brand <br />Managment<br />Solutions</span></div></div>
 		<div class="triangle"></div>	        
 	    <ol class="carousel-indicators">	   	    
 		        <li data-target="#managment-solutions" data-slide-to="0" class="indicator active">Brand <br />Loyalty</li>
-		        <li data-target="#managment-solutions" data-slide-to="1" class="indicator">Brand<br />Awarence</li>
+		        <li data-target="#managment-solutions" data-slide-to="1" class="indicator">Brand<br />Awareness</li>
 		        <li data-target="#managment-solutions" data-slide-to="2" class="indicator">Brand<br />Messaging</li>
 		        <li data-target="#managment-solutions" data-slide-to="3" class="indicator">Brand<br />Positioning<br />& Orientation</li>
 	    </ol>
@@ -635,7 +627,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/brand-management-ico2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
         	</div>
             <div class="item">
@@ -643,7 +635,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/brand-management-ico2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -651,7 +643,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/brand-management-ico2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -659,7 +651,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/brand-management-ico2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -667,7 +659,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/brand-management-ico2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
         </div>
@@ -757,7 +749,7 @@ return '
                 <div class="col-md-3 padder">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Proactive Micro Targeting</h2>
-					<p>Dunami allows for precise micro targeting of very<br  specific key audience networks with tailored messages.</p><a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<p>Dunami allows for precise micro targeting of very<br  specific key audience networks with tailored messages.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
             </div>
@@ -768,7 +760,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Reputation Managment</h2>
 					<p>Dunami can help identify the most influential voice to ensure positive brand awareness in the marketplace.</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
             </div>
@@ -777,7 +769,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Crisis Intervention</h2>
 					<p>Quickly engage potential crisis situations by delivering predetermined messages to key constituent groups though Dunami network identification and monitoring</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>
@@ -786,7 +778,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Message Development & Testing</h2>
 					<p>Create and test specific message on narrow audiences before broader distribution. Collect feedback and understand the impact of various messages.</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>
@@ -795,7 +787,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Focus Group Opportunities</h2>
 					<p>Uniquely identify specific sets of brand influencer’s and use as focus groups on new products, services or messages.</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>            
@@ -815,7 +807,7 @@ return '
 
     
 	<div class="indicator-row">
-		<div class="title">Dunami <br />Public Relations <br />Solutions</div>	        
+		<div class="title"><div><span>Dunami <br />Public Relations <br />Solutions</span></div></div>	        
 	    <div class="triangle"></div>
 	    <ol class="carousel-indicators">	   	    
 		        <li data-target="#public-relations" data-slide-to="0" class="indicator active">Proactive<br /> Micro<br /> Targeting</li>
@@ -854,7 +846,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-research-2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
         	</div>
             <div class="item">
@@ -862,7 +854,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-research-2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -870,7 +862,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-research-2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -878,7 +870,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-research-2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -886,7 +878,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-research-2.png" alt="Brand Managment Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
         </div>
@@ -923,7 +915,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-comm-ico-2.png" alt="corporate Communications Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
         	</div>
             <div class="item">
@@ -931,7 +923,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-comm-ico-2.png" alt="corporate Communications Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -939,7 +931,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-comm-ico-2.png" alt="corporate Communications Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -947,7 +939,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-comm-ico-2.png" alt="corporate Communications Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
             <div class="item">
@@ -955,7 +947,7 @@ return '
             		<div><img src="'.get_stylesheet_directory_uri().'/images/corp-comm-ico-2.png" alt="corporate Communications Icon" /></div>
             	</div>
 	            <div class="col-md-10 left-text tabler"><div><h2>
-	            	Know More then Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
+	            	Know More than Ever before. Know it in real time.<br> Assess your brand in the marketplace with powerful tools<br /> to analyze, measure and react.</h2></div>
 	            </div>
             </div>
         </div>
@@ -1042,12 +1034,11 @@ return '
     <div class="carousel-outer">
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-
             <div class="item brand-awareness active">
                 <div class="col-md-3 padder">&nbsp;</div>
                 <div class="text col-md-4">
 					<h2>Proactive Micro Targeting</h2>
-					<p>Dunami allows for precise micro targeting of very<br  specific key audience networks with tailored messages.</p><a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<p>Dunami allows for precise micro targeting of very<br  specific key audience networks with tailored messages.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
             </div>
@@ -1058,7 +1049,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Client Reputation Managment</h2>
 					<p>Dunami can help identify the most influential voice to ensure positive brand awareness in the marketplace.</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
             </div>
@@ -1067,7 +1058,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Proactive Crisis Intervention</h2>
 					<p>Quickly engage potential crisis situations by delivering predetermined messages to key constituent groups though Dunami network identification and monitoring</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>
@@ -1076,7 +1067,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Creation of Targeted Messages</h2>
 					<p>Create and test specific message on narrow audiences before broader distribution. Collect feedback and understand the impact of various messages.</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>
@@ -1085,7 +1076,7 @@ return '
                 <div class="text col-md-4">
 					<h2>Better Marketplace Understanding</h2>
 					<p>Uniquely identify specific sets of brand influencer’s and use as focus groups on new products, services or messages.</p>
-					<a class="dunami-effect btn btn-default reverse" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+					<a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
                 </div>                
                 <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
             </div>            
@@ -1105,7 +1096,7 @@ return '
 
     
 	<div class="indicator-row">
-		<div class="title">Dunami <br />Advertising <br />Solutions</div>	        
+		<div class="title"><div><span>Dunami <br />Advertising <br />Solutions</span></div></div>
 		<div class="triangle"></div>
 	    <ol class="carousel-indicators">	   	    
 		        <li data-target="#advertising-solutions" data-slide-to="0" class="indicator active">Proactive<br /> Micro<br /> Targeting</li>
@@ -1119,6 +1110,151 @@ return '
 </div>
 ';
 }
+add_shortcode('corporate-communications','generate_corporate_communications');
+function generate_corporate_communications(){
+return '
+<div id="managment-solutions" class="dunami-carousel-custom carousel slide" data-ride="carousel">
+    <div class="carousel-outer">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item brand-awareness active">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Loyalty</h2>
+					<p>The Dunami gives you the power to identify and specifically message to those who are loyal to your brand. Connect, engage and build relationships with those best poised to become your brand ambassadors</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
+            </div>
+
+
+            <div class="item brand-awareness">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Awareness</h2>
+					<p>Dunami allows real-time analyzing of who is aware of your brand and interacting with it via social media and other avenues.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
+            </div>
+            <div class="item brand-awareness">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Messaging</h2>
+					<p>Understanding the real impact on your brand of specific brand messages. Dunami allows you to collect feedback and better target key ideas to the right people.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
+            </div>
+            <div class="item brand-awareness">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Positioning & Orientation</h2>
+					<p>The Dunami gives you the power to identify and specifically message to those who are loyal to your brand. Connect, engage and build relationships with those best poised to become your brand ambassadors</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
+            </div>            
+        </div>
+        <!-- Controls -->
+        <div class="controls">
+	        <a class="" href="#managment-solutions" data-slide="prev">
+	            <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+	        </a>
+	        <a class="" href="#managment-solutions" data-slide="next">
+	            <span class="pull-right glyphicon glyphicon-chevron-right"></span>
+	        </a>
+	        <div class=clearfix"></div>
+		</div>        
+    </div>    
+    <!-- Indicators -->
+
+    
+	<div class="indicator-row">
+		<div class="title"><div><span>Dunami Corporate<br />Communications<br />Solutions</span></div></div>
+		<div class="triangle"></div>	        
+	    <ol class="carousel-indicators">	   	    
+		        <li data-target="#managment-solutions" data-slide-to="0" class="indicator active">Brand <br />Loyalty</li>
+		        <li data-target="#managment-solutions" data-slide-to="1" class="indicator">Brand<br />Awareness</li>
+		        <li data-target="#managment-solutions" data-slide-to="2" class="indicator">Brand<br />Messaging</li>
+		        <li data-target="#managment-solutions" data-slide-to="3" class="indicator">Brand<br />Positioning<br />& Orientation</li>
+	    </ol>
+	    <div class="space">&nbsp;</div>
+    </div>
+</div>
+';
+}
+
+add_shortcode('corporateresearch','generate_corporate_research');
+function generate_corporate_research(){
+return '
+<div id="managment-solutions" class="dunami-carousel-custom carousel slide" data-ride="carousel">
+    <div class="carousel-outer">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item brand-awareness active">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Loyalty</h2>
+					<p>The Dunami gives you the power to identify and specifically message to those who are loyal to your brand. Connect, engage and build relationships with those best poised to become your brand ambassadors</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
+            </div>
+
+
+            <div class="item brand-awareness">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Awareness</h2>
+					<p>Dunami allows real-time analyzing of who is aware of your brand and interacting with it via social media and other avenues.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>
+            </div>
+            <div class="item brand-awareness">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Messaging</h2>
+					<p>Understanding the real impact on your brand of specific brand messages. Dunami allows you to collect feedback and better target key ideas to the right people.</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
+            </div>
+            <div class="item brand-awareness">
+                <div class="col-md-3 padder">&nbsp;</div>
+                <div class="text col-md-4">
+					<h2>Brand Positioning & Orientation</h2>
+					<p>The Dunami gives you the power to identify and specifically message to those who are loyal to your brand. Connect, engage and build relationships with those best poised to become your brand ambassadors</p><a class="dunami-effect btn btn-default brand-management" href="//dunami.staging.wpengine.com/contact/" title="">Contact Us</a>
+                </div>                
+                <div class="zoom-picture col-md-5"><img src="'.get_stylesheet_directory_uri().'/images/zoom-picture.png" alt="Macbook and iMac showing the Dunami Platform" /></div><div class="clearfix"></div>                
+            </div>            
+        </div>
+        <!-- Controls -->
+        <div class="controls">
+	        <a class="" href="#managment-solutions" data-slide="prev">
+	            <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+	        </a>
+	        <a class="" href="#managment-solutions" data-slide="next">
+	            <span class="pull-right glyphicon glyphicon-chevron-right"></span>
+	        </a>
+	        <div class=clearfix"></div>
+		</div>        
+    </div>    
+    <!-- Indicators -->
+
+    
+	<div class="indicator-row">
+		<div class="title"><div><span>Dunami Corporate<br />Research Solutions</span></div></div>
+		<div class="triangle"></div>	        
+	    <ol class="carousel-indicators">	   	    
+		        <li data-target="#managment-solutions" data-slide-to="0" class="indicator active">Brand <br />Loyalty</li>
+		        <li data-target="#managment-solutions" data-slide-to="1" class="indicator">Brand<br />Awareness</li>
+		        <li data-target="#managment-solutions" data-slide-to="2" class="indicator">Brand<br />Messaging</li>
+		        <li data-target="#managment-solutions" data-slide-to="3" class="indicator">Brand<br />Positioning<br />& Orientation</li>
+	    </ol>
+	    <div class="space">&nbsp;</div>
+    </div>
+</div>
+';
+}
+
+
 /**
  * Enqueue and Register Scripts - Twitter Bootstrap, Font-Awesome, and Common.
  */
